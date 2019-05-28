@@ -1,0 +1,51 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/site.css'%}">
+    <title>Django Placeholder Images</title>
+</head>
+
+<body>
+    <div class="container"> 
+        <h1>Django Placeholder Images</h1>
+        <p>
+            这个服务能够为任意网页提供占位图片服务
+        </p>
+        <p>
+            <h2>如何请求一个占位图片？</h2>
+            只需要简单的引入一个 image,它的src指向:<span>Placeholder服务地址/&lt;width&gt;x&lt;height&gt;/</span>
+            <br> 例如：
+            <pre class="heighlight">
+    &lt;img src = "{{example}}" &gt;
+        </pre>
+        </p>
+        <p>
+            <h2>Examples</h2>
+            <ul>
+                <li>
+                    <img src="{% url 'placeholder' width=50 height=50 %}" alt="">
+                </li>
+                <li>
+                    <img src="{% url 'placeholder' width=100 height=50 %}" alt="">
+                </li>
+                <li>
+                    <img src="{% url 'placeholder' width=50 height=100 %}" alt="">
+                </li>
+                <li>
+                    <img src="{% url 'placeholder' width=100 height=50 %}" alt="">
+                </li>
+                <li>
+                    <img src="{% url 'placeholder' width=50 height=50 %}" alt="">
+                </li>
+            </ul>
+        </p>
+    </div>
+
+</body>
+
+</html>
