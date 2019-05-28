@@ -111,10 +111,13 @@ def index(request):
     return render(request, 'home.html', context)
 
 def page_not_found(request):
+    # todo
     return HttpResponse('404')
 def page_permission_denied(request):
+    #todo
     return HttpResponse('403')
 def page_inter_erro(request):
+    #todo
     return HttpResponse('405')
 
 
@@ -130,11 +133,6 @@ urlpatterns = [
    
 ]
 
-
-# # 配置异常页面
-# handler403 = page_permission_denied
-# handler404 = page_not_found
-# handler500 = page_inter_erro
 
 
 '''
